@@ -155,3 +155,62 @@ a {
     float: right;
     text-align: center;
 }
+
+
+.produtos-item {
+    background: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .35);
+    margin-top: 20px;
+    position: relative;
+/* quero que seja position relative para posicionar o botao do editar para cima, em relação ao container que ela está */
+}
+
+.produtos-item::after, .produtos-item::before {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.produtos-item img {
+    float: left;
+}
+
+.produtos-item a {
+    width: 24px;
+    height: 24px;
+    overflow: hidden;
+    text-indent: -200px;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    background: url("../img/edit.svg") no-repeat;
+}
+
+.produtos-item a:hover {
+    background: url("../img/edit-hover.svg") no-repeat;
+}
+
+.produtos-item ul {
+    float: left;
+    padding: 0 20px;
+    /* esse menos 140px eh por causa do tamanho da imagem */
+    width: calc(100% - 140px);
+}
+
+.produtos-item li {
+    padding: 10px 0;
+    font-size: 1.125em;
+    font-family: 'Courier New', Courier, monospace;
+    border-bottom: 1px solid #e7e4d8;
+}
+
+.produtos-item li:last-child {
+    border: none;
+}
+
+.produtos-item span {
+    font-weight: bold;
+    /* coloca como display inline-block para conseguir colocar width nele, aí para alinhar o resto da LI */
+    display: inline-block;
+    width: 70px;
+}
